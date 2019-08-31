@@ -207,3 +207,7 @@ def get_gScore(self, node):
 def distance(self, node_1, node_2):
     """ Computes the Euclidean L2 Distance"""
     return math.sqrt((map_40.intersections[node_1][0]-map_40.intersections[node_2][0])**2+(map_40.intersections[node_1][1]-map_40.intersections[node_2][1])**2)
+
+def get_tentative_gScore(self, current, neighbor):
+    """Returns the tentative g Score of a node"""
+    return self.get_gScore(current) + self.distance(current, neighbor)
