@@ -54,9 +54,9 @@ class PathPlanner():
         self.gScore = None
         self.fScore = None
         self.path = self.run_search() if self.map and self.start and self.goal else None
-
-   def run_search(self):
-        """ """
+    
+    def run_search(self):
+        
         if self.map == None:
             raise(ValueError, "Must create map before running search. Try running PathPlanner.set_map(start_node)")
         if self.goal == None:
@@ -97,8 +97,21 @@ class PathPlanner():
         self.path = None
         return False
  
+def create_closedSet(self):
+ 
+    return set()
 
 
+def create_openSet(self):
+    
+    if self.start != None:
+        
+        return set([self.start])
+    
+    raise(ValueError, "Must create start node before creating an open set. Try running PathPlanner.set_start(start_node)")
+
+
+    
 
 
 
