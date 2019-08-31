@@ -264,3 +264,8 @@ start = 5
 goal = 34
 
 show_map(map_40, start=start, goal=goal, path=PathPlanner(map_40, start, goal).path)
+
+
+from test import test
+
+test(PathPlanner)
