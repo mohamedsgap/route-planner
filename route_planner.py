@@ -249,3 +249,11 @@ PathPlanner.heuristic_cost_estimate = heuristic_cost_estimate
 PathPlanner.calculate_fscore = calculate_fscore
 PathPlanner.record_best_path_to = record_best_path_to
 
+# first test case
+planner = PathPlanner(map_40, 5, 34)
+path = planner.path
+if path == [5, 16, 37, 12, 34]:
+    print("great! Your code works for these inputs!")
+else:
+    print("something is off, your code produced the following:")
+    print(path)
