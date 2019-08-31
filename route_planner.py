@@ -181,5 +181,20 @@ def set_goal(self, goal):
     self._reset(self)
     self.goal = goal
 
+
+def is_open_empty(self):
+    """returns True if the open set is empty. False otherwise. """
+    if self.openSet is None:
+        return True
+    else:
+        return False
     
+def get_current_node(self):
+    """ Returns the node in the open set with the lowest value of f(node)."""
+    return min(self.openSet, key = lambda node: self.fScore[node])    
+
+
+def get_neighbors(self, node):
+    """Returns the neighbors of a node"""
+    return map_40.roads[node]
             
