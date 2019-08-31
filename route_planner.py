@@ -133,6 +133,21 @@ def create_cameFrom(self):
 
 
 
+def create_gScore(self):
+    """Creates and returns a data structure that holds the cost of getting from the start node to that node, 
+    for each node. The cost of going from start to start is zero."""
+    
+    cflist = {}
+    for node in self.map.intersections:
+        if node == self.start:
+            cflist[node] = 0
+        else:
+            cflist[node] = math.inf
+    return cflist
+
+
+
+
 
     
 
