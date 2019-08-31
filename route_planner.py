@@ -176,7 +176,10 @@ def set_start(self, start):
     self.start = start
     
 
-
+def set_goal(self, goal):
+    """Method used to set goal attribute """
+    self._reset(self)
+    self.goal = goal
 
     
             
