@@ -96,6 +96,8 @@ class PathPlanner():
         print("No Path Found")
         self.path = None
         return False
+
+
  
 def create_closedSet(self):
  
@@ -109,6 +111,27 @@ def create_openSet(self):
         return set([self.start])
     
     raise(ValueError, "Must create start node before creating an open set. Try running PathPlanner.set_start(start_node)")
+
+
+def create_cameFrom(self):
+    """Creates and returns a data structure that shows which node can most efficiently be reached from another,
+    for each node."""
+    
+    cameFrom = {}
+    for node in range(len(map_40.roads)):
+        dist = []
+        for neighbor in map_40.roads[node]:
+            dist.append(self.distance(node, neighbor))
+        
+        minimum = min(dist)
+    
+        for index in range(len(dist)):
+            if dist[index] == minimum:
+                cameFrom[node] = map_40.roads[node][index]
+    
+    return cameFrom
+
+
 
 
     
