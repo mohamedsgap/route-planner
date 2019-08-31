@@ -198,3 +198,7 @@ def get_neighbors(self, node):
     """Returns the neighbors of a node"""
     return map_40.roads[node]
             
+
+def get_gScore(self, node):
+    """Returns the g Score of a node"""
+    return self.gScore[node]
