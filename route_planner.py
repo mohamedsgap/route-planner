@@ -221,3 +221,9 @@ def heuristic_cost_estimate(self, node):
 def calculate_fscore(self, node):
     """Calculate the f score of a node. """
     return self.get_gScore(node) + self.heuristic_cost_estimate(node)    
+
+def record_best_path_to(self, current, neighbor):
+    """Record the best path to a node """
+    self.cameFrom[neighbor] = current
+    self.gScore[neighbor] = self.gScore[current] + self.distance(current, neighbor)
+    self.fScore[neighbor] = self.calculate_fscore(neighbor)
