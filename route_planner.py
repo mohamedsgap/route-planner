@@ -257,3 +257,10 @@ if path == [5, 16, 37, 12, 34]:
 else:
     print("something is off, your code produced the following:")
     print(path)
+
+
+# Visualize the result of the above test!
+start = 5
+goal = 34
+
+show_map(map_40, start=start, goal=goal, path=PathPlanner(map_40, start, goal).path)
