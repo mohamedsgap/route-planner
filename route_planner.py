@@ -147,6 +147,21 @@ def create_gScore(self):
 
 
 
+def create_fScore(self):
+    """Creates and returns a data structure that holds the total cost of getting from the start node to the goal
+    by passing by that node, for each node. That value is partly known, partly heuristic.
+    For the first node, that value is completely heuristic."""
+    
+    flist = {}
+    for node in self.map.intersections:
+        if node == self.start: #tajkhke a look at this section to make sure what heuristic means
+            flist[node] = self.heuristic_cost_estimate(node)
+        
+        else:
+            flist[node] = math.inf
+    
+    return flist
+
 
 
     
