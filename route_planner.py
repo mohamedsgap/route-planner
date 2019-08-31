@@ -216,3 +216,8 @@ def get_tentative_gScore(self, current, neighbor):
 def heuristic_cost_estimate(self, node):
     """ Returns the heuristic cost estimate of a node """
     return self.distance(self.goal, node)
+
+
+def calculate_fscore(self, node):
+    """Calculate the f score of a node. """
+    return self.get_gScore(node) + self.heuristic_cost_estimate(node)    
