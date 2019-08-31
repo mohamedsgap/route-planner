@@ -163,6 +163,12 @@ def create_fScore(self):
     return flist
 
 
+def set_map(self, M):
+    """Method used to set map attribute """
+    self._reset(self)
+    self.start = None
+    self.goal = None
+    self.map = M
 
     
 
