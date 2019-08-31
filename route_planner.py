@@ -227,3 +227,25 @@ def record_best_path_to(self, current, neighbor):
     self.cameFrom[neighbor] = current
     self.gScore[neighbor] = self.gScore[current] + self.distance(current, neighbor)
     self.fScore[neighbor] = self.calculate_fscore(neighbor)
+
+
+
+# Associates implemented functions with PathPlanner class
+PathPlanner.create_closedSet = create_closedSet
+PathPlanner.create_openSet = create_openSet
+PathPlanner.create_cameFrom = create_cameFrom
+PathPlanner.create_gScore = create_gScore
+PathPlanner.create_fScore = create_fScore
+PathPlanner.set_map = set_map
+PathPlanner.set_start = set_start
+PathPlanner.set_goal = set_goal
+PathPlanner.is_open_empty = is_open_empty
+PathPlanner.get_current_node = get_current_node
+PathPlanner.get_neighbors = get_neighbors
+PathPlanner.get_gScore = get_gScore
+PathPlanner.distance = distance
+PathPlanner.get_tentative_gScore = get_tentative_gScore
+PathPlanner.heuristic_cost_estimate = heuristic_cost_estimate
+PathPlanner.calculate_fscore = calculate_fscore
+PathPlanner.record_best_path_to = record_best_path_to
+
