@@ -170,6 +170,10 @@ def set_map(self, M):
     self.goal = None
     self.map = M
 
+def set_start(self, start):
+    """Method used to set start attribute """
+    self._reset(self)
+    self.start = start
     
 
 
